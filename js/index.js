@@ -59,3 +59,28 @@ return nodes.length;
 
 CountLiElementsInList("list");
 console.log(CountLiElementsInList("list"));
+
+function MoveByClassAttribute(listId, classAttribute, newListId){
+ let list = document.getElementById(listId);
+ let newList = document.getElementById(newListId);
+
+ for (let index = 0; index < list.children.length; index++) {
+    const element = list.children[index];
+    
+    if (element.getAttribute("class") == classAttribute) {
+        newList.appendChild(element);
+    }
+ }
+}
+
+MoveByClassAttribute("list", "unhealthy", "listUnhealthy");
+
+function Add(){
+let a = document.createTextNode(document.getElementById("add").value);
+let element = document.createElement("li");
+element.setAttribute("class", "healthy");
+element.appendChild(a);
+liste.appendChild(element);
+}
+
+document.getElementById("addbutton").addEventListener("click", Add);
