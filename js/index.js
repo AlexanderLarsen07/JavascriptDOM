@@ -44,3 +44,9 @@ element.remove();
 }
 
 DeleteElement("6");
+
+function ChangeText(elementId, text){
+document.getElementById(elementId).textContent = text;
+}
+
+ChangeText("2", "Water");
