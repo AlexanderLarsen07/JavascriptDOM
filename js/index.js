@@ -50,3 +50,12 @@ document.getElementById(elementId).textContent = text;
 }
 
 ChangeText("2", "Water");
+
+function CountLiElementsInList(listId){
+const element = document.getElementById(listId)
+const nodes = element.getElementsByTagName("li")
+return nodes.length;
+}
+
+CountLiElementsInList("list");
+console.log(CountLiElementsInList("list"));
