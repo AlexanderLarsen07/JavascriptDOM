@@ -37,3 +37,10 @@ AppendElement("list", AddElement("Strawberries", "unhealthy", "6"));
 const strawberries = document.getElementById("6");
 console.log(strawberries);
 AddClassAttribute(strawberries, "healthy");
+
+function DeleteElement(elementId){
+const element = document.getElementById(elementId);
+element.remove();
+}
+
+DeleteElement("6");
