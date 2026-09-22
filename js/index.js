@@ -28,3 +28,12 @@ list.appendChild(element);
 }
 
 AppendElement("listUnhealthy", AddElement("Crack", "unhealthy", "5"));
+
+function AddClassAttribute(element, attribute){
+element.setAttribute("class", attribute);
+}
+
+AppendElement("list", AddElement("Strawberries", "unhealthy", "6"));
+const strawberries = document.getElementById("6");
+console.log(strawberries);
+AddClassAttribute(strawberries, "healthy");
